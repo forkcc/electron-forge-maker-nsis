@@ -1,0 +1,57 @@
+{
+  "name": "@felixrieseberg/electron-forge-maker-nsis",
+  "version": "7.2.0",
+  "description": "An `electron-forge` maker for NSIS that supports `electron-forge` v6 and can be used as a replacement for `electron-builder`. Supports code-signing and basic updates with `electron-updater`.",
+  "main": "dist/cjs/makerNsis.js",
+  "module": "dist/esm/makerNsis.js",
+  "files": [
+    "dist",
+    "yarn.lock",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixrieseberg/electron-forge-maker-nsis.git"
+  },
+  "author": {
+    "name": "Felix Rieseberg",
+    "email": "felix@felixrieseberg.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felixrieseberg/electron-forge-maker-nsis/issues"
+  },
+  "homepage": "https://github.com/felixrieseberg/electron-forge-maker-nsis",
+  "dependencies": {
+    "@electron-forge/maker-base": "^7.6.0",
+    "@electron/windows-sign": "^1.2.0",
+    "app-builder-lib": "^24.13.3",
+    "debug": "^4.4.0",
+    "electron-updater-yaml": "^1.1.2",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "standard": "^17.0.0",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "lint": "eslint --ext .ts,.js src",
+    "prepublishOnly": "yarn build"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
